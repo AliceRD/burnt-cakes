@@ -41,6 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: player
+  - name: Ground
+    uniqueID: 602004145
+    locked: 0
+  - name: Wall Bottom
+    uniqueID: 3505393935
+    locked: 0
+  - name: Wall Tops 2
+    uniqueID: 3489118611
+    locked: 0
+  - name: Objects
+    uniqueID: 3465036669
+    locked: 0
+  - name: Player
     uniqueID: 1952677133
+    locked: 0
+  - name: Wall Top
+    uniqueID: 87633707
     locked: 0

@@ -11,13 +11,13 @@ public class playerController : MonoBehaviour
 	void Start()
 	{
 		animator = this.GetComponent<Animator>();
-		animator.SetInteger ("Direction", 5);
+	//	animator.SetInteger ("Direction", 5); 
 	}
 
 	// Update is called once per frame
 	void FixedUpdate()
 	{
-		var vertical = Input.GetAxisRaw ("Vertical"); 
+		var vertical = Input.GetAxisRaw ("Vertical"); //Input.GetAxisRaw used instead of Input.GetAxis, because the latter smooths values and causes delayed tranistions between animations
 		var horizontal = Input.GetAxisRaw ("Horizontal");
 
 		if (vertical > 0) {
@@ -29,12 +29,12 @@ public class playerController : MonoBehaviour
 		} else if (horizontal < 0) {
 			animator.SetInteger ("Direction", 1);
 		} else if (vertical == 0) {
-			animator.SetInteger ("Direction", 5);
+			animator.SetInteger ("Direction", 5); // Direction 5 triggers still animation of the last direction the player was facing, if no movement is detected.
 		} else if (horizontal == 0) {
 			animator.SetInteger ("Direction", 5);
 		}
-		int val = animator.GetInteger ("Direction");
-		Debug.Log (val);
+	//	int val = animator.GetInteger ("Direction");
+	//	Debug.Log (val);
 	}
 }
 	
